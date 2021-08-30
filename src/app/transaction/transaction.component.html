@@ -1,0 +1,125 @@
+<div class="row">
+  <div class="col-xs-4">
+<div class="form-group" style="margin-left: 30px;">
+    <label for="transaction type">Transaction Type</label>
+    <select id="transaction type" name="transaction type" class="form-control">
+        <option selected><--Transaction Type--></option>
+            <option value="1">Full Premium</option>
+            <option value="2">Half Premium</option>
+      </select>
+    </div>
+  </div>
+  <div class ="col-xs-1">
+      <p></p>
+      </div>
+      <div class="col-xs-7">
+          <h2>Document selection</h2>
+          <div class="scrollable">
+              <table class="table table-bordered">
+                  <thead>
+                      <tr>
+                          <td>Include</td>
+                          <td>Filename</td>
+                          <td>Document Type</td>
+                          <td>Amount</td>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                        <td><input type="checkbox"></td>
+                        <td>msg-22007.html</td>
+                        <td><select name="Document type" class="form-control">
+                            <option selected><--Document type--></option>
+                                <option value="1">HTML</option>
+                                <option value="2">XML</option>
+                          </select></td>
+                        <td>1000$</td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox"></td>
+                        <td>msg-22007.html</td>
+                        <td><select name="Document type" class="form-control">
+                            <option selected><--Document type--></option>
+                                <option value="1">HTML</option>
+                                <option value="2">XML</option>
+                          </select></td>
+                        <td>1000$</td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox"></td>
+                        <td>msg-22007.html</td>
+                        <td><select name="Document type" class="form-control">
+                            <option selected><--Document type--></option>
+                                <option value="1">HTML</option>
+                                <option value="2">XML</option>
+                          </select></td>
+                        <td>1000$</td>
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox"></td>
+                        <td>msg-22007.html</td>
+                        <td><select name="Document type" class="form-control">
+                            <option selected><--Document type--></option>
+                                <option value="1">HTML</option>
+                                <option value="2">XML</option>
+                          </select></td>
+                        <td>1000$</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+</div>
+<div class="row">
+    <div class="col-xs-4" style="margin-left: 30px;">
+       <mat-form-field>
+            <input matInput [matDatepicker]="datepicker" placeholder="Effective Date"> 
+            <mat-datepicker-toggle matsuffix [for]="datepicker"></mat-datepicker-toggle>
+            <mat-datepicker #datepicker></mat-datepicker>
+       </mat-form-field>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-4">
+  <div class="form-group" style="margin-left: 30px;">
+      <label for="users">Users</label>
+      <select id="users" name="users" class="form-control">
+          <option selected disabled>available users</option>
+              <option value="1">Full-Time Users</option>
+              <option value="2">Part-Time Users</option>
+        </select>
+      </div>
+    </div>
+  </div>
+<div class="row">
+    <div class="col-xs-12" style="margin-left: 30px;">
+            <h2>Agreements</h2>
+            <div class="scrollable">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <td>CASE</td>
+                            <td>CASE NAME</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let i of rowdata">
+                          <td>{{i.casenumber}}</td>
+                          <td>{{i.casename}}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="nav navbar-nav nabar-right>">
+                    <button class="btn btn-success" (click)="OnClickButton()" >Add Agreement</button>
+                    <button class="btn btn-danger">Remove Agreement</button>
+            </div>
+            </div>
+        </nav>
+    </div>

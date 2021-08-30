@@ -1,0 +1,87 @@
+<div class="row">
+    <div class="col-xs-12">
+    
+    <form [formGroup]="userform">
+        <div class="form-group" style="width: 50%;">
+        <h2>CASE</h2>
+       <br>
+      <label for="case number">CASE NUMBER </label>
+      <input type="number" id="case number"formControlName="casenumber" class="form-control" placeholder="casenumber" style="width:50%">
+            <label for="case name">CASE name </label>
+            <input type="text" id="case name"formControlName="casename" class="form-control" placeholder="casename" style="width: 50%;">
+        </div>
+    </form>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>GROUP</h2>
+        <br>
+       <label for="Group number">GROUP NUMBER </label>
+       <input type="number" id="Group number"formControlName="Groupnumber" class="form-control" placeholder="Groupnumber" style="width:25%">
+             <label for="Groupname">GROUP NAME </label>
+             <input type="text" id="Group name"formControlName="Grouname" class="form-control" placeholder="Groupname" style="width:25%" >
+      </div>
+    </div>
+     <br>
+        <div class="row" style="margin-left: 5px;">
+          <h2>POLICY</h2>
+    <div class="input-group">
+        <label for="policy number">POLICY NUMBER </label>
+        <br>
+        <input type="number" id="case number ">
+        <br>
+              <label for="first name">FIRST NAME </label>
+              <br>
+        <input type="text" id="case number ">
+    </div>
+  </div>
+
+  <div class="row" style="margin-left: 5px;">
+    <div class="input-group">
+        <label for="ssn">SSN</label>
+        <br>
+        <input type="number" id="ssn">
+        <br>
+              <label for="last name">LAST NAME </label>
+              <br>
+        <input type="text" id="last name">
+    </div>
+  </div>
+  <br>
+
+  <div class="row" style="margin-left:50px">
+      <h3>Search Type</h3>
+    <mat-tab-group animationDuration="0ms">
+        <mat-tab label="Case"><div class="scrollable">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td>CASE</td>
+                        <td>CASE NAME</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of listdata">
+                      <td>{{item.casenumber}}</td>
+                      <td>{{item.casename}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+            </div>
+        </mat-tab>
+        <mat-tab label="Group">Content 2</mat-tab>
+        <mat-tab label="Policy">Content 3</mat-tab>
+      </mat-tab-group>
+  </div>
+  <div class="row" style="margin-left: 5px;">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="nav navbar-nav nabar-right>">
+                <button type="button" class="btn btn-success" (click)="AddItem()">Add Agreement</button>
+                <button class="btn btn-danger">Remove Agreement</button>
+        </div>
+        </div>
+    </nav>
+</div>
